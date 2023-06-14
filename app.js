@@ -107,6 +107,20 @@ console.log(typeof client.result); // "string"
 // Приклади використання функції:
 // let keys = [1, 2, 3, 4];
 // let values = ["div", "span", "b", "i"];
+
+const mapBuilder = (keysArray, valuesArrays) => {
+  if (keysArray.length !== valuesArrays.length) {
+    return false;
+  }
+  const map = new Map();
+  for (let i = 0; i < keysArray.length; i++) {
+    for (let i = 0; i < valuesArrays.length; i++) {
+      map.set(keysArray[i], valuesArrays[i]);
+    }
+  }
+  return map;
+};
+
 // let map = mapBuilder(keys, values);
 // console.log(map.size); // 4
 // console.log(map.get(2)); // "span"
