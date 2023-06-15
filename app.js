@@ -41,15 +41,13 @@ console.log(age4); // 26
 // Якщо параметри типу Number відсутні, повертає число 0.
 function mul(...data) {
   const arrNumbers = data.filter((el) => typeof el === "number");
-
-  if (arrNumbers !== 0) {
-    return arrNumbers.reduce((a, b) => el * b);
-  } else {
+  if (arrNumbers == 0) {
     return 0;
+  } else if (arrNumbers !== 0) {
+    return arrNumbers.reduce((a, b) => a * b);
   }
 }
-
-console.log(mul(1, "str", 2, 3, true)); // 6
+// console.log(mul(1, "str", 2, 3, true)); // 6
 // console.log(mul(null, "str", false, true)); // 0
 
 // 10-4.
