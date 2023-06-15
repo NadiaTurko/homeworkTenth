@@ -113,13 +113,12 @@ const mapBuilder = (keysArray, valuesArrays) => {
     return false;
   }
   const map = new Map();
-  for (let i = 0; i < keysArray.length; i++) {
-    for (let i = 0; i < valuesArrays.length; i++) {
-      map.set(keysArray[i], valuesArrays[i]);
-    }
-  }
+  keysArray.forEach((key, index) => {
+    map.set(key, valuesArrays[index]);
+  });
   return map;
 };
+
 
 // let map = mapBuilder(keys, values);
 // console.log(map.size); // 4
