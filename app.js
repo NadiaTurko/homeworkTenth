@@ -11,7 +11,7 @@ let names = {
   fourth: "Bob",
 };
 names.fifth = "Name №5";
-let { first: f, second: s, third: x, fourth: y, fifth: fifth } = names;
+let { first: f, second: s, third: x, fifth = "Name №5"  } = names;
 
 // console.log(f); // "Tom"
 
